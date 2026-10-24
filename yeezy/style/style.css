@@ -1,0 +1,330 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    position: relative;
+    isolation: isolate;
+    color: yellow;
+    overflow-x: hidden;
+}
+
+/* =========================
+   STAR BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../img/star.png");
+    background-size: 500px auto;
+    background-position: top left;
+    background-repeat: repeat;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav_bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    gap: 20px;
+    background-color: black;
+    color: yellow;
+    border-bottom: 0.5PX solid yellow;
+}
+
+/* =========================
+   USER PROFILE
+========================= */
+
+.user_profile {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid yellow;
+    border-radius: 14px;
+    padding: 6px 20px;
+    transition: border-radius 0.3s ease;
+}
+
+.user_profile:hover {
+    border-radius: 20px;
+}
+
+.material-symbols-outlined {
+    color: yellow;
+}
+
+.profile_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: yellow;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile_button:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.nav_bar form {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search_bar {
+    width: 100%;
+    max-width: 500px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid yellow;
+    border-radius: 14px;
+    transition: border-radius 0.3s ease;
+}
+
+.search_bar:hover,
+.search_bar:focus-within {
+    border-radius: 20px;
+}
+
+.text_search {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: yellow;
+    font-size: 16px;
+}
+
+.text_search::placeholder {
+    color: #d4d4d4;
+}
+
+/* =========================
+   NEGM MENU
+========================= */
+
+.negm_icon {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.negm_list_button {
+    border: none;
+    background: transparent;
+    color: yellow;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.negm_list_button:hover {
+    transform: scale(1.05);
+}
+
+/* Dropdown */
+
+.negm_content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    padding: 8px 0;
+    background-color: black;
+    border: 1px solid yellow;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.negm_content a {
+    display: block;
+    color: yellow;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.negm_content a:hover {
+    background-color: #222;
+    border-bottom-color: yellow;
+}
+
+.negm_icon:hover .negm_content,
+.negm_icon:focus-within .negm_content {
+    display: block;
+}
+
+/* =========================
+   SLOGAN
+========================= */
+
+.slogan {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 300px;
+    padding: 0 15px;
+    color: yellow;
+    text-align: center;
+}
+.subtitle {
+    margin-top: 5px;
+    color: yellow;
+    font-size: 20px;
+}
+.slogan h1 {
+    font-size: clamp(22px, 4vw, 60px);
+    font-weight: 700;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+    .nav_bar {
+        padding: 15px 3%;
+        gap: 12px;
+    }
+
+    .user_profile {
+        gap: 6px;
+        padding: 4px 6px;
+    }
+
+    .negm_list_button {
+        font-size: 25px;
+    }
+
+    .search_bar {
+        padding: 7px 9px;
+    }
+
+    .slogan {
+        margin-top: 250px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    .nav_bar {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .user_profile {
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .user_profile .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    .search_bar {
+        padding: 6px;
+        gap: 4px;
+    }
+
+    .search_bar .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    .text_search {
+        font-size: 13px;
+    }
+
+    .negm_list_button {
+        font-size: 18px;
+        padding: 4px 0;
+    }
+
+    .negm_content {
+        min-width: 120px;
+    }
+
+    .negm_content a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .slogan {
+        margin-top: 200px;
+        font-size: clamp(20px, 5.5vw, 28px);
+        padding: 0 10px;
+    }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 350px) {
+    .nav_bar {
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .user_profile {
+        gap: 2px;
+    }
+
+    .user_profile .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+    .negm_list_button {
+        font-size: 16px;
+    }
+
+    .text_search {
+        font-size: 11px;
+    }
+
+    .search_bar {
+        padding: 4px;
+    }
+}

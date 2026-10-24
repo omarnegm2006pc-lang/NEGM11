@@ -1,0 +1,125 @@
+.top
+{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     border: 1px solid black;
+     padding-bottom: 15px;
+}
+.img
+{
+    width: 15px;
+    height: 15px;
+    object-fit: auto;
+}
+.type
+{
+    display: flex;
+    margin: auto;
+    gap:20px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+.male
+{
+    text-decoration: none;
+    color :darkgrey;
+}
+.female
+{
+    text-decoration: none;
+    color: black
+}
+.cartimg
+{
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.plusimg
+{
+    padding-right: 20px;
+    padding-top: 0px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    object-fit: auto;
+    color :black
+}
+.low
+{
+     position: fixed;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+}
+.lowbar
+{
+    display: flex;
+    gap:30px;
+}
+.contact
+{
+     text-decoration: none;
+     font-size: small;
+     color :rgb(87, 85, 85)
+}
+.terms
+{
+     text-decoration: none;
+     font-size: small;
+     color :rgb(87, 85, 85)
+}
+.orderstatus
+{
+     text-decoration: none;
+     font-size: small;
+     color :rgb(87, 85, 85)
+}
+.backhome
+{
+     padding-right: 20px;
+     padding-top: 9px;
+     width: 15px;
+     height: 15px;
+     position: absolute;
+     left: 20px;
+     object-fit: auto;
+     color :black;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     align-items: center;
+}
+.article
+{
+    
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    text-emphasis: center; 
+}
+.backimg
+{
+    padding-right: 20px;
+    padding-top: 0px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 20px;
+    object-fit: auto;
+}
+.terms_article
+{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    text-emphasis: center; 
+    font-size: 10px;
+}
